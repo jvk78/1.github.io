@@ -248,14 +248,8 @@ iframe,
   text-transform: uppercase;
 }
 .conacts__logo {
-  display: flex;
-  justify-content: center;
-  padding: 0 20px;
-}
-.conacts__logo img {
-  width: 30%;
-  height: auto;
-  margin: 0 15px 16px;
+  width: 40%;
+  margin-bottom: 16px;
 }
 .phone__mail,
 .phone__mail a {
@@ -343,10 +337,8 @@ iframe,
 /* -=736=-*/
 @media screen and (max-width: 736px) {
   .about__logo {
+    height: 100px;
     margin-bottom: 10px;
-  }
-  .conacts__logo img {
-    width: 40%;
   }
   .contacts__map_scr {
     display: none;
@@ -372,9 +364,6 @@ iframe,
 }
 /* -=390=-*/
 @media screen and (max-width: 390px) {
-  .conacts__logo img {
-    width: 50%;
-  }
   .about__text {
     padding: 0 0 20px;
   }
