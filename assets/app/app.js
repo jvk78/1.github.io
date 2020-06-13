@@ -1,3 +1,22 @@
+const a = document.querySelectorAll('input');
+const b = document.getElementById('form');
+let title = document.getElementById('comp');
+let f;
+  a.forEach(function(i, o, c) {
+    i.addEventListener('click', function() {
+      i.id==='ru' ? f = 'О компании' : f = 'КОМПАНИЯ ТУРАЛЫ';
+      title.textContent = f;
+    }) 
+  })
+  
+
+const playVideo = document.getElementById('play__video');
+const scrWraper = document.getElementById('scr__wrapper');
+const mapWraper = document.getElementById('map__wrapper');
+const openMap = document.getElementById('open__map');
+const openMapSm = document.getElementById('open__map-small');
+
+/* Slick Slider Pref*/
 $('.slider').slick({
   dots: true,
   infinite: true,
@@ -10,20 +29,12 @@ $('.slider').slick({
 //  fade: true,
 });
 
-const playVideo = document.getElementById('play__video');
-const scrWraper = document.getElementById('scr__wrapper');
-const mapWraper = document.getElementById('map__wrapper');
-const openMap = document.getElementById('open__map');
-const openMapSm = document.getElementById('open__map-small');
-
-
+/* Create Video*/
 var tag = document.createElement('script');
-
   tag.src = "https://www.youtube.com/iframe_api";
   var firstScriptTag = document.getElementsByTagName('script')[0];
   firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-  var player;
+var player;
   function onYouTubeIframeAPIReady() {
     player = new YT.Player('player', {
       height: '390',
@@ -36,8 +47,8 @@ var tag = document.createElement('script');
     });
   }
 
+/* Play Video */
 function onPlayerReady(event) {
-  
 playVideo.addEventListener('click', function() {
   playVideo.style.opacity = '0';
       setTimeout(function(){playVideo.style.display = 'none'}, 500);
@@ -45,9 +56,9 @@ playVideo.addEventListener('click', function() {
   } ) 
 }
 
-
+/* Create Map */
 var map;
-
+var mapPopUp = '<b>Маревен Фуд Тянь-Шань</b><br>050000,&nbsp;Республика&nbsp;Казахстан, г.&nbsp;Алматы,&nbsp;ул.&nbsp;Кунаева,&nbsp;д.77,<br>Бизнес&nbsp;центр&nbsp;«Parkview&nbsp;Office&nbsp;Tower», 6&nbsp;этаж,&nbsp;офис&nbsp;№13<br>+7&nbsp;(727)&nbsp;321-11-19'
 function createMap() {
 DG.then(function () {
   map = DG.map('map', {
@@ -62,12 +73,12 @@ DG.then(function () {
   DG.marker([43.25806, 76.94946], {
     icon: myIcon}).addTo(map)
     .bindLabel('Маревен Фуд Тянь-Шань', {
-    
   })
-    .bindPopup('<b>Маревен Фуд Тянь-Шань</b><br>050000,&nbsp;Республика&nbsp;Казахстан, г.&nbsp;Алматы,&nbsp;ул.&nbsp;Кунаева,&nbsp;д.77,<br>Бизнес&nbsp;центр&nbsp;«Parkview&nbsp;Office&nbsp;Tower», 6&nbsp;этаж,&nbsp;офис&nbsp;№13<br>+7&nbsp;(727)&nbsp;321-11-19')
+    .bindPopup(mapPopUp)
   });
 }
 
+/* Show Map */
 function showMap(btn) {
   btn.onclick = function() {
     mapWraper.innerHTML = '<div class="map" id="map"><div class="cls__btn" id="cls__btn"></div></div>';
@@ -85,6 +96,5 @@ function showMap(btn) {
     }
   }
 } 
-
 showMap(openMap);
 showMap(openMapSm);
