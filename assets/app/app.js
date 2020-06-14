@@ -8,13 +8,46 @@ let f;
       title.textContent = f;
     }) 
   })
-  
+  /*+++++++++++++++++++++++++++++++++++++++++++++++++*/
 
 const playVideo = document.getElementById('play__video');
 const scrWraper = document.getElementById('scr__wrapper');
 const mapWraper = document.getElementById('map__wrapper');
 const openMap = document.getElementById('open__map');
 const openMapSm = document.getElementById('open__map-small');
+const navBall = document.getElementById('ball');
+const navLink = document.querySelectorAll('.nav_link');
+
+
+navLink.forEach(function(item, index) {
+  item.addEventListener('mouseover', function(){
+  let angle;
+    switch(index) {
+      case 0: angle = -60; break;
+      case 1: angle = -25; break;
+      case 2: angle = 25; break;
+      case 3: angle = 60; break;
+    }
+  ball.style.transform = 'translateX(-50%) rotate(' + angle + 'deg)'
+    
+  });
+  item.addEventListener('mouseout', function () {
+    angle = -60
+  ball.style.transform = 'translateX(-50%) rotate(' + angle + 'deg)'
+
+  })
+    
+//  console.log(angle)
+})
+
+
+
+
+
+
+
+
+
 
 /* Slick Slider Pref*/
 $('.slider').slick({
