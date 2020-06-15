@@ -16,8 +16,8 @@ const mapWraper = document.getElementById('map__wrapper');
 const openMap = document.getElementById('open__map');
 const openMapSm = document.getElementById('open__map-small');
 const navBall = document.getElementById('ball');
-const navLink = document.querySelectorAll('.nav_link');
-
+const navLink = document.querySelectorAll('.nav__link');
+console.log()
 
 navLink.forEach(function(item, index) {
   item.addEventListener('mouseover', function(){
@@ -37,7 +37,6 @@ navLink.forEach(function(item, index) {
 
   })
     
-//  console.log(angle)
 })
 
 
@@ -53,7 +52,7 @@ navLink.forEach(function(item, index) {
 $('.slider').slick({
   dots: true,
   infinite: true,
-//  autoplay: true,
+  autoplay: true,
   autoplaySpeed: 2000,
   speed: 1000,
   slidesToShow: 1,
