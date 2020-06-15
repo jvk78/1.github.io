@@ -3,7 +3,7 @@
 
 .left {
   align-items: center;
-  text-align: center;
+//  text-align: center;
   font-weight: 300;
   letter-spacing: .2px;
 }
@@ -12,10 +12,38 @@
   font-weight: 400;
   text-transform: uppercase;
 }
-.conacts__logo {
-  width: 40%;
+.conacts__logos {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 70px;
+  width: 100%;
   margin-bottom: 16px;
+//  background-color: #ffb4b4;
 }
+.conacts__logo{
+  display: flex;
+  align-items: center;
+//  position: relative;
+//  background-color: #b0fcff;
+//  border: 1px solid #000;
+  height: 100%;
+  width: 40%;
+  margin: 0 5px; 
+}
+.conacts__logo svg{
+//  position: absolute;
+//  top: 50%;
+//  left: 0%;
+//  transform: translateY(-50%);
+  height: 100%;
+  width: 100%;
+//  background-color: #fff;
+}
+.conacts__logo.sm svg {
+  height: 85%;
+//  left: 0;
+} 
 .phone__mail, .phone__mail a{
   margin: 10px 5px 0;
   font-weight: 400;

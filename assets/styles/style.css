@@ -291,14 +291,14 @@ input:checked + label {
   height: 120px;
   margin: 10px 0 30px;
 }
-.about__logo img {
+.about__logo svg {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   height: 100%;
 }
-.sm img {
+.sm svg {
   height: 80%;
 }
 .about__text {
@@ -388,7 +388,6 @@ iframe,
 /* Contacts */
 .left {
   align-items: center;
-  text-align: center;
   font-weight: 300;
   letter-spacing: 0.2px;
 }
@@ -397,9 +396,27 @@ iframe,
   font-weight: 400;
   text-transform: uppercase;
 }
-.conacts__logo {
-  width: 40%;
+.conacts__logos {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 70px;
+  width: 100%;
   margin-bottom: 16px;
+}
+.conacts__logo {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 40%;
+  margin: 0 5px;
+}
+.conacts__logo svg {
+  height: 100%;
+  width: 100%;
+}
+.conacts__logo.sm svg {
+  height: 85%;
 }
 .phone__mail,
 .phone__mail a {
