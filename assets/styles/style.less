@@ -7,7 +7,7 @@ html, body {
   font-weight: normal;
   margin: 0;
   padding: 0;
-  color: #fff;
+  color: #000;
 }
 *, *:before,*:after {
   -webkit-box-sizing: border-box;
@@ -21,30 +21,18 @@ h1 {
   text-transform: uppercase;
   margin: 20px auto;
   text-align: center;
-  color: @brown;
 }
-section {
+section{
   position: relative;
   background-color: #fff8d5;
   overflow: hidden;
 }
-
-.woodBg {
-  background: url(../img/wood_bg.jpg) center no-repeat;
-}
-.oldPaperBg {
-  background: url(../img/old_paper_bg.jpg) center no-repeat;
-}
-.woodBg, .oldPaperBg {
-    background-size: cover;
-}
-
 .container {
   width: 100%;
   max-width: 1000px;
   margin: 0 auto;
   padding: 0 10px;
-//  border: 1px solid #000;
+  border: 1px solid #000;
 //  background-color: #fff;
 }
 a {
@@ -56,6 +44,7 @@ a {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
   grid-gap: 10px;
+//  grid-row-gap: 25px;
   width: 100%;
   margin-bottom: 30px;
   padding: 0px 20px;
@@ -69,10 +58,6 @@ a {
 //  border: 1px solid #ff0101;
   text-align: center;
   margin-bottom: 10px;
-}
-.text__white {
-  color: #fff;
-  text-shadow: 1px 1px 2px #000;
 }
 
 @import "blocks/home";

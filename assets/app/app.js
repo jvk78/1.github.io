@@ -16,11 +16,9 @@ const mapWraper = document.getElementById('map__wrapper');
 const openMap = document.getElementById('open__map');
 const openMapSm = document.getElementById('open__map-small');
 const navBall = document.getElementById('ball');
-const navLink = document.querySelectorAll('.nav__link');
-console.log(prodLeft)
+const navLink = document.querySelectorAll('.nav_link');
 
 
-/* Rounded Menu */
 navLink.forEach(function(item, index) {
   item.addEventListener('mouseover', function(){
   let angle;
@@ -39,7 +37,17 @@ navLink.forEach(function(item, index) {
 
   })
     
+//  console.log(angle)
 })
+
+
+
+
+
+
+
+
+
 
 /* Slick Slider Pref*/
 $('.slider').slick({
