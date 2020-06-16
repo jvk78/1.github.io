@@ -54,34 +54,34 @@ const prodLeft = [
 const prodRight = [
   {
     id: 'right_1',
-    url: './img/products/.png',
-    name:'',
-    alt: ''
+    url: './assets/img/products/egg_perya.png',
+    name:'Перья',
+    alt: 'egg_perya'
   },
   {
     id: 'right_2',
-    url: './img/products/.png',
-    name:'',
-    alt: ''
+    url: './assets/img/products/egg_rozhki.png',
+    name:'Рожки',
+    alt: 'egg_rozhki'
   },
   {
     id: 'right_3',
-    url: './img/products/.png',
-    name:'',
-    alt: ''
+    url: './assets/img/products/egg_spagetti.png',
+    name:'Спагетти',
+    alt: 'egg_spagetti'
   },
   {
     id: 'right_4',
-    url: './img/products/.png',
-    name:'',
-    alt: ''
+    url: './assets/img/products/egg_spiral.png',
+    name:'Спирали',
+    alt: 'egg_spiral'
   },
   {
     id: 'right_5',
-    url: './img/products/.png',
-    name:'',
-    alt: ''
-  },
+    url: './assets/img/products/egg_vermishel.png',
+    name:'Вермишель',
+    alt: 'egg_vermishel'
+  }
   
 ]
 
